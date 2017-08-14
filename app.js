@@ -1,8 +1,13 @@
+'use strict';
+
 var pikeStore = {
   location: '1st and Pike',
   minCust: 23,
   maxCust: 65,
   avgCookie: 6.3,
+  salesPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  }
 };
 
 var seatacStore = {
@@ -10,6 +15,9 @@ var seatacStore = {
   minCust: 3,
   maxCust: 24,
   avgCookie: 1.2,
+  salesPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  }
 };
 
 var seacenStore = {
@@ -17,6 +25,9 @@ var seacenStore = {
   minCust: 11,
   maxCust: 38,
   avgCookie: 3.7,
+  salesPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  }
 };
 
 var capHillStore = {
@@ -24,6 +35,9 @@ var capHillStore = {
   minCust: 20,
   maxCust: 38,
   avgCookie: 2.3,
+  salesPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  }
 };
 
 var alkiStore = {
