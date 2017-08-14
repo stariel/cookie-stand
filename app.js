@@ -31,4 +31,7 @@ var alkiStore = {
   minCust: 2,
   maxCust: 16,
   avgCookie: 4.6,
+  salesPerHour: function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  }
 };
