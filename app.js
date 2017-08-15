@@ -21,17 +21,22 @@ var pikeStore = {
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
+    this.salesModel();
+    var salesLoc = document.getElementById('sales');
+    var newH2 = document.createElement('h2');
+    newH2.id = 'pikeLoc';
+    newH2.innerText = this.location;
+    salesLoc.appendChild(newH2);
     for (var i = 0; i < this.dailySales.length; i++) {
-      var pike = document.getElementById('pike');
+      var pikeLoc = document.getElementById('pikeLoc');
       var newLi = document.createElement('li');
       var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
-      pike.appendChild(newLi);
+      pikeLoc.appendChild(newLi);
     }
   }
 };
 
-pikeStore.salesModel();
 pikeStore.dataToPage();
 
 var seatacStore = {
