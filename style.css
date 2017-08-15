@@ -41,3 +41,23 @@ div {
   font-family: Times, sans-serif;
   color: darkblue;
 }
+
+.contact {
+  font-size: 20px;
+  font-family: Century, Arial, sans-serif;
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+#cookies {
+  border: black 3px dotted;
+  margin: 5%;
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+  border: none;
+  height: 1px;
+}
