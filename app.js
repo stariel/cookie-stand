@@ -2,6 +2,8 @@
 
 var openHours = ['6:00am: ', '7:00am: ', '8:00am: ', '9:00am: ', '10:00am: ', '11:00am: ', '12:00pm: ', '1:00pm: ', '2:00pm: ', '3:00pm: ', '4:00pm: ', '5:00pm: ', '6:00pm: ', '7:00pm: '];
 
+var cookieStoreLocations = [];
+
 function CookieStore (location, minCust, maxCust, avgCookie){
   this.location = location;
   this.minCust = minCust;
@@ -47,6 +49,7 @@ function CookieStore (location, minCust, maxCust, avgCookie){
       }
     }
   };
+  cookieStoreLocations.push(this);
 };
 
 var pikeStore = new CookieStore('1st and Pike', 23, 65, 6.3);
@@ -55,8 +58,6 @@ var seacenStore = new CookieStore('Seattle Center', 11, 38, 3.7);
 var capHillStore = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alkiStore = new CookieStore('Alki', 2, 16, 4.6);
 
-var storeLocations = [pikeStore, seatacStore, seacenStore, capHillStore, alkiStore];
-
-for (var i = 0; i < storeLocations.length; i++) {
-  storeLocations[i].dataToPage();
+for (var i = 0; i < cookieStoreLocations.length; i++) {
+  cookieStoreLocations[i].dataToPage();
 }
