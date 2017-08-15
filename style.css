@@ -3,24 +3,24 @@
 }
 
 body {
-  background-color: salmon;
+  background-color: rgb(255, 240, 240);
 }
 
 h1 {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 50px;
-  color: purple;
+  color: indigo;
 }
 
 #about {
-  background-color: lightGrey;
+  background-color: salmon;
   width: 40%;
   padding: 20px;
   float: left;
 }
 
 #locations {
-  background-color: lightGrey;
+  background-color: salmon;
   width: 40%;
   padding: 20px;
   float: left;
@@ -34,10 +34,10 @@ div {
 
 .data {
   font-family: Arial, sans-serif;
-  color: indigo;
+  color: rgb(20, 20, 20);
 }
 
 .text {
   font-family: Times, sans-serif;
-  color: blue;
+  color: darkblue;
 }
