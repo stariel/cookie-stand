@@ -67,23 +67,26 @@ var createTable = function() {
     newTr.id = name;
     newTr.innerText = name;
     insideTable.appendChild(newTr);
-  }
-  for (var i = 0; i <= cookieStoreLocations[i].dailySales.length; i++) {
-    if (i < cookieStoreLocations[i].dailySales.length) {
-      var nameLoc = document.getElementById(name);
-      var newTd = document.createElement('td');
-      var newString = cookieStoreLocations[i].dailySales[i] + ' cookies';
-      newTd.innerText = newString;
-      nameLoc.appendChild(newTd);
-    }
-    else {
-      var nameLoc = document.getElementById(name);
-      var newLi = document.createElement('td');
-      var newString = 'Total: ' + cookieStoreLocations[i].totalSales + ' cookies';
-      newLi.innerText = newString;
-      nameLoc.appendChild(newLi);
-    }
-  }
+  };
+  for (var i = 0; i < cookieStoreLocations.length; i++) {
+    for (var j = 0; j <= cookieStoreLocations[i].dailySales.length; j++) {
+      if (j < cookieStoreLocations[i].dailySales.length) {
+        name = cookieStoreLocations[i].location;
+        var nameLoc = document.getElementById(name);
+        var newTd = document.createElement('td');
+        var newString = cookieStoreLocations[i].dailySales[j];
+        newTd.innerText = newString;
+        nameLoc.appendChild(newTd);
+      }
+      else {
+        var nameLoc = document.getElementById(name);
+        var newTot = document.createElement('td');
+        var newString = cookieStoreLocations[i].totalSales;
+        newTot.innerText = newString;
+        nameLoc.appendChild(newTot);
+      }
+    };
+  };
 };
 
 createTable();
