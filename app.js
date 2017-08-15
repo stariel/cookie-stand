@@ -12,6 +12,7 @@ var pikeStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);},
   salesModel: function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 6; i <= 20; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
@@ -43,6 +44,7 @@ var seatacStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);},
   salesModel: function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 6; i <= 20; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
@@ -74,6 +76,7 @@ var seacenStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);},
   salesModel: function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 6; i <= 20; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
@@ -105,6 +108,7 @@ var capHillStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);},
   salesModel: function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 6; i <= 20; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
@@ -137,6 +141,7 @@ var alkiStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);},
   salesModel: function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 6; i <= 20; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
