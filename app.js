@@ -16,9 +16,7 @@ var pikeStore = {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
       this.dailySales.push(hourlySales);
-      console.log (hourlySales);
     }
-    console.log (totalSales);
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
@@ -49,9 +47,7 @@ var seatacStore = {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
       this.dailySales.push(hourlySales);
-      console.log (hourlySales);
     }
-    console.log (totalSales);
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
@@ -82,9 +78,7 @@ var seacenStore = {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
       this.dailySales.push(hourlySales);
-      console.log (hourlySales);
     }
-    console.log (totalSales);
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
@@ -115,9 +109,7 @@ var capHillStore = {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
       this.dailySales.push(hourlySales);
-      console.log (hourlySales);
     }
-    console.log (totalSales);
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
@@ -149,9 +141,7 @@ var alkiStore = {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
       this.dailySales.push(hourlySales);
-      console.log (hourlySales);
     }
-    console.log (totalSales);
     this.dailySales.push(totalSales);
   },
   dataToPage: function() {
