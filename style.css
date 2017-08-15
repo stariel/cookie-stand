@@ -1,7 +1,43 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
   background-color: salmon;
 }
+
 h1 {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 50px;
+}
+
+#about {
+  background-color: lightGrey;
+  width: 40%;
+  padding: 20px;
+  float: left;
+}
+
+#locations {
+  background-color: lightGrey;
+  width: 40%;
+  padding: 20px;
+  float: left;
+}
+
+div {
+  border: black 5px solid;
+  margin: 5px;
+  height: 225px;
+
+}
+
+p .data {
+  font-family: Arial, sans-serif;
+  border: black;
+}
+
+p .text {
+  font-family: Times, sans-serif;
+  border: black;
 }
