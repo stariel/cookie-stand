@@ -9,6 +9,7 @@ body {
 h1 {
   font-family: 'Sedgwick Ave Display', cursive;
   font-size: 50px;
+  color: purple;
 }
 
 #about {
@@ -29,15 +30,14 @@ div {
   border: black 5px solid;
   margin: 5px;
   height: 225px;
-
 }
 
-p .data {
+.data {
   font-family: Arial, sans-serif;
-  border: black;
+  color: indigo;
 }
 
-p .text {
+.text {
   font-family: Times, sans-serif;
-  border: black;
+  color: blue;
 }
