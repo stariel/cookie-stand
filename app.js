@@ -1,6 +1,26 @@
 'use strict';
 
-var timeOfDay = ['6am: ', '7am: ', '8am: ', '9am: ', '10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: ', '6pm: ', '7pm: ', '8pm: ', 'Total: '];
+var openHours = ['6:00am: ', '7:00am: ', '8:00am: ', '9:00am: ', '10:00am: ', '11:00am: ', '12:00pm: ', '1:00pm: ', '2:00pm: ', '3:00pm: ', '4:00pm: ', '5:00pm: ', '6:00pm: ', '7:00pm: '];
+
+function CookieStore (location, minCust, maxCust, avgCookie){
+  this.location = location;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookie = avgCookie;
+  this.custPerHour = function() {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+  };
+  this.salesModel = function(){
+    var totalSales = 0;
+    this.dailySales = [];
+    for (var i = 6; i <= 20; i++) {
+      var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
+      totalSales = (totalSales + hourlySales);
+      this.dailySales.push(hourlySales);
+    }
+    this.dailySales.push(totalSales);
+  };
+};
 
 var pikeStore = {
   location: '1st and Pike',
@@ -30,7 +50,7 @@ var pikeStore = {
     for (var i = 0; i < this.dailySales.length; i++) {
       var pikeLoc = document.getElementById('pikeLoc');
       var newLi = document.createElement('li');
-      var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
+      var newString = openHours[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
       pikeLoc.appendChild(newLi);
     }
@@ -67,7 +87,7 @@ var seatacStore = {
     for (var i = 0; i < this.dailySales.length; i++) {
       var seatacLoc = document.getElementById('seatacLoc');
       var newLi = document.createElement('li');
-      var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
+      var newString = openHours[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
       seatacLoc.appendChild(newLi);
     }
@@ -104,7 +124,7 @@ var seacenStore = {
     for (var i = 0; i < this.dailySales.length; i++) {
       var seacenLoc = document.getElementById('seacenLoc');
       var newLi = document.createElement('li');
-      var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
+      var newString = openHours[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
       seacenLoc.appendChild(newLi);
     }
@@ -141,7 +161,7 @@ var capHillStore = {
     for (var i = 0; i < this.dailySales.length; i++) {
       var capLoc = document.getElementById('capLoc');
       var newLi = document.createElement('li');
-      var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
+      var newString = openHours[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
       capLoc.appendChild(newLi);
     }
@@ -179,7 +199,7 @@ var alkiStore = {
     for (var i = 0; i < this.dailySales.length; i++) {
       var alkiLoc = document.getElementById('alkiLoc');
       var newLi = document.createElement('li');
-      var newString = timeOfDay[i] + this.dailySales[i] + ' cookies';
+      var newString = openHours[i] + this.dailySales[i] + ' cookies';
       newLi.innerText = newString;
       alkiLoc.appendChild(newLi);
     }
