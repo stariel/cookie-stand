@@ -24,31 +24,6 @@ function CookieStore (location, minCust, maxCust, avgCookie){
     }
     this.totalSales = totalSales;
   };
-  this.dataToPage = function() {
-    this.salesModel();
-    var salesLoc = document.getElementById('sales');
-    var newH2 = document.createElement('h2');
-    var name = this.location;
-    newH2.id = name;
-    newH2.innerText = this.location;
-    salesLoc.appendChild(newH2);
-    for (var i = 0; i <= this.dailySales.length; i++) {
-      if (i < this.dailySales.length) {
-        var nameLoc = document.getElementById(name);
-        var newLi = document.createElement('li');
-        var newString = openHours[i] + this.dailySales[i] + ' cookies';
-        newLi.innerText = newString;
-        nameLoc.appendChild(newLi);
-      }
-      else {
-        var nameLoc = document.getElementById(name);
-        var newLi = document.createElement('li');
-        var newString = 'Total: ' + this.totalSales + ' cookies';
-        newLi.innerText = newString;
-        nameLoc.appendChild(newLi);
-      }
-    }
-  };
   cookieStoreLocations.push(this);
 };
 
@@ -58,6 +33,82 @@ var seacenStore = new CookieStore('Seattle Center', 11, 38, 3.7);
 var capHillStore = new CookieStore('Capitol Hill', 20, 38, 2.3);
 var alkiStore = new CookieStore('Alki', 2, 16, 4.6);
 
-for (var i = 0; i < cookieStoreLocations.length; i++) {
-  cookieStoreLocations[i].dataToPage();
-}
+var createTable = function() {
+  var salesLoc = document.getElementById('sales');
+  var table = document.createElement('table');
+  salesLoc.appendChild(table);
+  table.id = 'table';
+  var insideTable = document.getElementById('table');
+  var newTr = document.createElement('tr');
+  newTr.id = 'heading';
+  insideTable.appendChild(newTr);
+  var headLoc = document.getElementById('heading');
+  var newTh = document.createElement('th');
+  headLoc.appendChild(newTh);
+  for (var i = 0; i <= openHours.length; i++) {
+    if (i < openHours.length) {
+      var newTh = document.createElement('th');
+      var newString = openHours[i];
+      newTh.innerText = newString;
+      headLoc.appendChild(newTh);
+    }
+    else {
+      var nameLoc = document.getElementById(name);
+      var newTotal = document.createElement('th');
+      var totString = 'Total: ';
+      newTotal.innerText = totString;
+      headLoc.appendChild(newTotal);
+    }
+  };
+  for (var i = 0; i < cookieStoreLocations.length; i++) {
+    cookieStoreLocations[i].salesModel();
+    var newTr = document.createElement('tr');
+    var name = cookieStoreLocations[i].location;
+    newTr.id = name;
+    newTr.innerText = name;
+    insideTable.appendChild(newTr);
+  }
+  for (var i = 0; i <= cookieStoreLocations[i].dailySales.length; i++) {
+    if (i < cookieStoreLocations[i].dailySales.length) {
+      var nameLoc = document.getElementById(name);
+      var newTd = document.createElement('td');
+      var newString = cookieStoreLocations[i].dailySales[i] + ' cookies';
+      newTd.innerText = newString;
+      nameLoc.appendChild(newTd);
+    }
+    else {
+      var nameLoc = document.getElementById(name);
+      var newLi = document.createElement('td');
+      var newString = 'Total: ' + cookieStoreLocations[i].totalSales + ' cookies';
+      newLi.innerText = newString;
+      nameLoc.appendChild(newLi);
+    }
+  }
+};
+
+createTable();
+
+//
+//  var newTr =
+//   var name = this.location;
+//   newTr.id = name;
+//   newTr.innerText = name;
+//   insideTable.appendChild(newTr);
+//   for (var i = 0; i <= this.dailySales.length; i++) {
+//     if (i < this.dailySales.length) {
+//       var nameLoc = document.getElementById(name);
+//       var newTd = document.createElement('td');
+//       var newString = this.dailySales[i] + ' cookies';
+//       newTd.innerText = newString;
+//       nameLoc.appendChild(newTd);
+//     }
+//     else {
+//       var nameLoc = document.getElementById(name);
+//       var newLi = document.createElement('td');
+//       var newString = 'Total: ' + this.totalSales + ' cookies';
+//       newLi.innerText = newString;
+//       nameLoc.appendChild(newLi);
+//     }
+//   }
+// };
+//
