@@ -88,8 +88,6 @@ var createTableHeader = function() {
   }
 };
 
-// Footer here:
-
 var createFooter = function() {
   var insideTable = document.getElementById('table');
   var newTr = document.createElement('tr');
@@ -105,8 +103,6 @@ var createFooter = function() {
   footLoc.appendChild(newTd);
 };
 
-// Daily Sales Totals Function
-
 var hourlyTotals = function() {
   var hourlyTotal = 0;
   for (var i = 0; i < openHours.length; i++) {
@@ -120,8 +116,6 @@ var hourlyTotals = function() {
     grandTotal += hourlyTotal;
   }
 };
-
-// Call Functions
 
 createTableHeader();
 for (var i = 0; i < cookieStoreLocations.length; i++) {
