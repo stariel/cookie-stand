@@ -26,29 +26,35 @@ h1 {
   float: left;
 }
 
-table {
+#table {
   border-collapse: collapse;
   width: 96%;
   margin: auto;
 }
 
-tr:nth-child(odd) {
+#table tr:nth-child(odd) {
   background-color: lightBlue;
 }
 
-#heading {
+#table #heading {
   background-color: darkBlue;
   color: white;
 }
 
-#footer {
+#table #footer {
   background-color: lightGrey;
   color: red;
 }
 
-table, th, td, tr {
+#table, th, td, tr {
   border: thin solid darkBlue;
   padding: 2px;
+}
+
+#form {
+  font-family: Arial, sans-serif;
+  color: indigo;
+
 }
 
 div {

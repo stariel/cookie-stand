@@ -5,8 +5,8 @@ var openHours = ['6:00am: ', '7:00am: ', '8:00am: ', '9:00am: ', '10:00am: ', '1
 var cookieStoreLocations = [];
 var grandTotal = 0;
 
-function CookieStore (location, minCust, maxCust, avgCookie){
-  this.location = location;
+function CookieStore (storeName, minCust, maxCust, avgCookie){
+  this.storeName = storeName;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookie = avgCookie;
@@ -17,7 +17,6 @@ function CookieStore (location, minCust, maxCust, avgCookie){
   };
   this.salesModel = function(){
     var totalSales = 0;
-    this.dailySales = [];
     for (var i = 0; i < openHours.length; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
@@ -30,7 +29,7 @@ function CookieStore (location, minCust, maxCust, avgCookie){
     this.salesModel();
     var insideTable = document.getElementById('table');
     var newTr = document.createElement('tr');
-    var name = this.location;
+    var name = this.storeName;
     newTr.id = name;
     newTr.innerText = name;
     insideTable.appendChild(newTr);
