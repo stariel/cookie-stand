@@ -103,8 +103,8 @@ var createFooter = function() {
 };
 
 var hourlyTotals = function() {
-  var hourlyTotal = 0;
   for (var i = 0; i < openHours.length; i++) {
+    var hourlyTotal = 0;
     for (var j = 0; j < cookieStoreLocations.length; j++) {
       hourlyTotal += cookieStoreLocations[j].dailySales[i];
     }
@@ -127,12 +127,10 @@ form.addEventListener('submit', postNewStore);
 
 function postNewStore(event){
   event.preventDefault();
-  console.log(event);
   var newStore = new CookieStore();
   newStore.storeName = this.elements['storeLoc'].value;
-  newStore.minCust = this.elements['minCust'].value;
-  newStore.maxCust = this.elements['maxCust'].value;
-  newStore.avgCookie = this.elements['avgCookies'].value;
+  newStore.minCust = parseInt(this.elements['minCust'].value);
+  newStore.maxCust = parseInt(this.elements['maxCust'].value);
+  newStore.avgCookie = parseFloat(this.elements['avgCookies'].value);
   newStore.render();
-  this.style = 'border: thin solid black;';
-  this.reset();}
+}
