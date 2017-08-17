@@ -121,3 +121,18 @@ for (var i = 0; i < cookieStoreLocations.length; i++) {
   cookieStoreLocations[i].render();
 }
 createFooter();
+
+var form = document.getElementById('form');
+form.addEventListener('submit', postNewStore);
+
+function postNewStore(event){
+  event.preventDefault();
+  console.log(event);
+  var newStore = new CookieStore();
+  newStore.storeName = this.elements['storeLoc'].value;
+  newStore.minCust = this.elements['minCust'].value;
+  newStore.maxCust = this.elements['maxCust'].value;
+  newStore.avgCookie = this.elements['avgCookies'].value;
+  newStore.render();
+  this.style = 'border: thin solid black;';
+  this.reset();}
