@@ -63,6 +63,10 @@ div {
   height: 225px;
 }
 
+table {
+  margin: 20px;
+}
+
 .data {
   font-family: Arial, sans-serif;
   color: rgb(20, 20, 20);
