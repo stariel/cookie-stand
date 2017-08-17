@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 240, 240);
+}
+
+h1 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 50px;
+  color: indigo;
+  text-align: center;
+}
+
+#table {
+  border-collapse: collapse;
+  width: 96%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+#table tr:nth-child(odd) {
+  background-color: lightBlue;
+}
+
+#table #heading {
+  background-color: darkBlue;
+  color: white;
+}
+
+#table #footer {
+  background-color: lightGrey;
+  color: red;
+}
+
+#table, th, td, tr {
+  border: thin solid darkBlue;
+  padding: 2px;
+}
+
+#form {
+  font-family: Arial, sans-serif;
+  color: indigo;
+  width: 90%;
+  margin: auto;
+  min-width: 550px;
+
+}
+
+table {
+  margin: 20px;
+}
+
+.data {
+  font-family: Arial, sans-serif;
+  color: rgb(20, 20, 20);
+}
+
+.text {
+  font-family: Times, sans-serif;
+  color: darkblue;
+}
+
+#mainSalmon {
+  display: block;
+ width: 60%;
+ margin: auto;
+}
+
+fieldset {
+  width: 70%;
+  margin: auto;
+}
