@@ -12,6 +12,29 @@ h1 {
   color: indigo;
 }
 
+nav {
+  background-color: rgba(203, 101, 106, 0.5);
+  height: 73px;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline;
+  border: 2px solid;
+  border-color: black;
+  background-color: darkGrey;
+  padding: 20px;
+}
+nav ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav li {
+  margin: 5px;
+}
+
 #about {
   background-color: salmon;
   width: 40%;
