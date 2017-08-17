@@ -104,6 +104,7 @@ var createFooter = function() {
 };
 
 var hourlyTotals = function() {
+  grandTotal = 0;
   for (var i = 0; i < openHours.length; i++) {
     var hourlyTotal = 0;
     for (var j = 0; j < cookieStoreLocations.length; j++) {
@@ -133,5 +134,10 @@ function postNewStore(event){
   newStore.minCust = parseInt(this.elements['minCust'].value);
   newStore.maxCust = parseInt(this.elements['maxCust'].value);
   newStore.avgCookie = parseFloat(this.elements['avgCookies'].value);
+  var oldRow = document.getElementById('footer');
+  var container = oldRow.parentNode;
+  container.removeChild(oldRow);
   newStore.render();
+  cookieStoreLocations.push(newStore);
+  createFooter();
 }
