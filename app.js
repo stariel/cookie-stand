@@ -13,10 +13,11 @@ function CookieStore (storeName, minCust, maxCust, avgCookie){
   this.dailySales = [];
   this.totalSales = 0;
   this.custPerHour = function() {
-    return Math.floor(Math.random() * ((this.maxCust - this.minCust) + this.minCust));
+    return Math.round((Math.random() * (this.maxCust - this.minCust)) + this.minCust);
   };
   this.salesModel = function(){
     var totalSales = 0;
+    this.dailySales = [];
     for (var i = 0; i < openHours.length; i++) {
       var hourlySales = Math.round((this.custPerHour() * this.avgCookie));
       totalSales = (totalSales + hourlySales);
