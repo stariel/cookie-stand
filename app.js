@@ -13,7 +13,7 @@ function CookieStore (storeName, minCust, maxCust, avgCookie){
   this.dailySales = [];
   this.totalSales = 0;
   this.custPerHour = function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.floor(Math.random() * ((this.maxCust - this.minCust) + this.minCust));
   };
   this.salesModel = function(){
     var totalSales = 0;
