@@ -26,6 +26,31 @@ h1 {
   float: left;
 }
 
+table {
+  border-collapse: collapse;
+  width: 96%;
+  margin: auto;
+}
+
+tr:nth-child(odd) {
+  background-color: lightBlue;
+}
+
+#heading {
+  background-color: darkBlue;
+  color: white;
+}
+
+#footer {
+  background-color: lightGrey;
+  color: red;
+}
+
+table, th, td, tr {
+  border: thin solid darkBlue;
+  padding: 2px;
+}
+
 div {
   border: black 5px solid;
   margin: 5%;
