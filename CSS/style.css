@@ -51,45 +51,10 @@ nav li {
   float: left;
 }
 
-#table {
-  border-collapse: collapse;
-  width: 96%;
-  margin: auto;
-}
-
-#table tr:nth-child(odd) {
-  background-color: lightBlue;
-}
-
-#table #heading {
-  background-color: darkBlue;
-  color: white;
-}
-
-#table #footer {
-  background-color: lightGrey;
-  color: red;
-}
-
-#table, th, td, tr {
-  border: thin solid darkBlue;
-  padding: 2px;
-}
-
-#form {
-  font-family: Arial, sans-serif;
-  color: indigo;
-
-}
-
 div {
   border: black 5px solid;
   margin: 5%;
   height: 250px;
-}
-
-table {
-  margin: 20px;
 }
 
 .data {
