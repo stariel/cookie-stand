@@ -13,6 +13,10 @@ h1 {
   text-align: center;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 nav {
   background-color: rgba(203, 101, 106, 0.5);
   height: 73px;
@@ -37,11 +41,15 @@ nav li {
   margin: 5px;
 }
 
-#about {
+#tryCookies {
   background-color: salmon;
   width: 40%;
   padding: 20px;
   float: left;
+}
+
+#tryCookies p {
+    font-size: 17px;
 }
 
 #locations {
@@ -76,6 +84,21 @@ div {
   height: 150px;
   padding: 15px;
   margin: 2%;
+}
+
+#locList {
+  list-style: none;
+}
+
+.locName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.locName li {
+  font-weight: normal;
+  list-style: none;
+  font-size: 16px;
 }
 
 #contactInfo {
@@ -114,4 +137,8 @@ div {
   border-radius: 10px;
   margin-right: 20px;
   margin-left: 20px;
+}
+
+#rightAccent {
+  float: right;
 }
