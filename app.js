@@ -5,15 +5,15 @@ var openHours = ['6:00am: ', '7:00am: ', '8:00am: ', '9:00am: ', '10:00am: ', '1
 var cookieStoreLocations = [];
 var grandTotal = 0;
 
-function CookieStore (location, minCust, maxCust, avgCookie){
-  this.location = location;
+function CookieStore (storeName, minCust, maxCust, avgCookie){
+  this.storeName = storeName;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookie = avgCookie;
   this.dailySales = [];
   this.totalSales = 0;
   this.custPerHour = function() {
-    return Math.floor(Math.random() * (this.maxCust - this.minCust) + this.minCust);
+    return Math.round((Math.random() * (this.maxCust - this.minCust)) + this.minCust);
   };
   this.salesModel = function(){
     var totalSales = 0;
@@ -30,7 +30,7 @@ function CookieStore (location, minCust, maxCust, avgCookie){
     this.salesModel();
     var insideTable = document.getElementById('table');
     var newTr = document.createElement('tr');
-    var name = this.location;
+    var name = this.storeName;
     newTr.id = name;
     newTr.innerText = name;
     insideTable.appendChild(newTr);
@@ -104,8 +104,10 @@ var createFooter = function() {
 };
 
 var hourlyTotals = function() {
-  var hourlyTotal = 0;
+  grandTotal = 0;
+  hourlyTotal = [];
   for (var i = 0; i < openHours.length; i++) {
+    var hourlyTotal = 0;
     for (var j = 0; j < cookieStoreLocations.length; j++) {
       hourlyTotal += cookieStoreLocations[j].dailySales[i];
     }
@@ -122,3 +124,20 @@ for (var i = 0; i < cookieStoreLocations.length; i++) {
   cookieStoreLocations[i].render();
 }
 createFooter();
+
+var form = document.getElementById('form');
+form.addEventListener('submit', postNewStore);
+
+function postNewStore(event){
+  event.preventDefault();
+  var newStore = new CookieStore();
+  newStore.storeName = this.elements['storeLoc'].value;
+  newStore.minCust = parseInt(this.elements['minCust'].value);
+  newStore.maxCust = parseInt(this.elements['maxCust'].value);
+  newStore.avgCookie = parseFloat(this.elements['avgCookies'].value);
+  var oldRow = document.getElementById('footer');
+  var container = oldRow.parentNode;
+  container.removeChild(oldRow);
+  newStore.render();
+  createFooter();
+}
