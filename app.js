@@ -43,11 +43,11 @@ function CookieStore (storeName, minCust, maxCust, avgCookie){
         nameLoc.appendChild(newTd);
       }
       else {
-        var nameLoc = document.getElementById(name);
+        var totLoc = document.getElementById(name);
         var newTot = document.createElement('td');
         var totString = this.totalSales;
         newTot.innerText = totString;
-        nameLoc.appendChild(newTot);
+        totLoc.appendChild(newTot);
       }
     }
   };
@@ -73,13 +73,11 @@ var createTableHeader = function() {
   headLoc.appendChild(newTh);
   for (var i = 0; i <= openHours.length; i++) {
     if (i < openHours.length) {
-      var newTh = document.createElement('th');
       var newString = openHours[i];
       newTh.innerText = newString;
       headLoc.appendChild(newTh);
     }
     else {
-      var nameLoc = document.getElementById(name);
       var newTotal = document.createElement('th');
       var totString = 'Total: ';
       newTotal.innerText = totString;
