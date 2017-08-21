@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 240, 240);
+}
+
+h1 {
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 50px;
+  color: indigo;
+  text-align: center;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+nav {
+  background-color: rgba(203, 101, 106, 0.5);
+  height: 73px;
+  font-family: Arial, sans-serif;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline;
+  border: 2px solid;
+  border-color: black;
+  background-color: rgb(163, 233, 215);
+  padding: 20px;
+}
+nav ul {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+nav li {
+  margin: 5px;
+}
+
+#tryCookies {
+  background-color: salmon;
+  width: 40%;
+  padding: 20px;
+  float: left;
+}
+
+#tryCookies p {
+    font-size: 17px;
+}
+
+#locations {
+  background-color: salmon;
+  width: 40%;
+  padding: 20px;
+  float: left;
+}
+
+div {
+  border: black 5px solid;
+  margin: 5%;
+  height: 250px;
+}
+
+.data {
+  font-family: Arial, sans-serif;
+  color: rgb(20, 20, 20);
+}
+
+.text {
+  font-family: Times, sans-serif;
+  color: darkblue;
+  font-size: 18px;
+}
+
+.contact {
+  font-size: 18px;
+  font-family: Century, Arial, sans-serif;
+  float: left;
+  width: 30%;
+  height: 150px;
+  padding: 15px;
+  margin: 2%;
+}
+
+#locList {
+  list-style: none;
+}
+
+.locName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.locName li {
+  font-weight: normal;
+  list-style: none;
+  font-size: 16px;
+}
+
+#contactInfo {
+  text-align: center;
+}
+
+#cookies {
+  border: black 3px dotted;
+  width: 29%;
+  margin: 2%;
+  float: left;
+}
+
+#frosted {
+  border: black 3px dotted;
+  width: 29%;
+  margin: 2%;
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+  border: none;
+  height: 1px;
+}
+
+.mainSalmon {
+  display: block;
+ width: 60%;
+ margin: auto;
+ margin-bottom: 50px;
+}
+
+.accentImg {
+  float: left;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#rightAccent {
+  float: right;
+}

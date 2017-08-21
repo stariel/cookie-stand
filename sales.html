@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/salesStyle.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
       <h1> Daily Sales Estimates for Salmon Cookies</h1>
-      <img src="salmon.png" alt="Illustration of a Coho salmon">
+      <img src="pics/salmon.png" alt="Illustration of a Coho salmon" class="mainSalmon">
         <section id="sales">
       </section>
       <!-- Form -->
       <section id="formSpot">
+        <fieldset><legend>Add a New Store</legend>
         <form class="newStore" action="sales.html" id="form">
           <table>
             <tr>
-            <td><label for="storeLoc">Store location:</label>
-            <input type="text" name="storeLoc" placeholder="Name of new location" required/></td>
+            <td><label for="storeLoc">Store location:</label></td>
+            <td><input type="text" name="storeLoc" placeholder="Name of new location" required/></td>
           </tr>
           <tr>
-          <td><label for="minCust" required>Minimum hourly customers:</label>
-            <input type="number" name="minCust" step="1"></td>
+          <td><label for="minCust" required>Minimum hourly customers:</label></td>
+            <td><input type="number" name="minCust" step="1"></td>
           </tr>
           <tr>
             <td>
-              <label for="maxCust">Maximum hourly customers:</label>
-              <input type="number" name="maxCust" step="1" required>
+              <label for="maxCust">Maximum hourly customers:</label></td>
+              <td><input type="number" name="maxCust" step="1" required>
             </td>
           </tr>
           <tr>
-          <td><label for="maxCust">Average cookies purchased per customer:</label>
-            <input type="number" name="avgCookies" step="0.1" required></td>
+          <td><label for="maxCust">Average cookies purchased per customer:</label></td>
+            <td><input type="number" name="avgCookies" step="0.1" required></td>
           </tr>
             <tr>
-            <td><input type="submit" value="Add Store" id="submit" /></td>
+            <td colspan="2"><input type="submit" value="Add Store" id="submit" /></td>
           </tr>
           </table>
         </form>
+        </fieldset>
       </section>
   </body>
   <script src="app.js" type="text/javascript"></script>
