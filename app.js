@@ -88,9 +88,9 @@ var createTableHeader = function() {
 
 var createFooter = function() {
   var insideTable = document.getElementById('table');
-  var newTr = document.createElement('tr');
-  newTr.id = 'footer';
-  insideTable.appendChild(newTr);
+  var newFooter = document.createElement('tr');
+  newFooter.id = 'footer';
+  insideTable.appendChild(newFooter);
   var footLoc = document.getElementById('footer');
   var newTd = document.createElement('td');
   newTd.innerText = 'Totals';
